@@ -8,8 +8,18 @@ int main()
 		massiv[i] = i + 1;
 	}
 	massiv = Swap(massiv, 0, 4);
+	//printf("%d\n", CompareThree(1, 2, 3));
 	ShowArray(massiv,n);
 	system("pause");
+}
+
+void ShowArray(int* massiv)
+{
+	for (size_t i = 0; i < n; i++)
+	{
+		printf("%d ", massiv[i]);
+	}
+	printf("\n");
 }
 int sum(int a, int b)
 {
@@ -142,9 +152,6 @@ int CompareThree(int a, int b, int c)
 
 			greater3 :
 		mov a, 2
-			jmp exit
-
-			exit :
 	}
 	return a;
 }
@@ -164,12 +171,4 @@ int* Swap(int* massiv, int m, int mm)
 	massiv[m] = a;
 	massiv[mm] = b;
 	return massiv;
-}
-void ShowArray(int* massiv)
-{
-	for (size_t i = 0; i < n; i++)
-	{
-		printf("%d ", massiv[i]);
-	}
-	printf("\n");
 }
