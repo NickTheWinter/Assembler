@@ -1,9 +1,13 @@
 #include "Header.h"
-#define n 3
+#define n 5
 int main()
 {
-	int* massiv[n] = calloc()
-	massiv = Swap(massiv, 2, 3);
+	int* massiv = calloc(n, sizeof(int));
+	for (size_t i = 0; i < n; i++)
+	{
+		massiv[i] = i + 1;
+	}
+	massiv = Swap(massiv, 0, 4);
 	ShowArray(massiv,n);
 	system("pause");
 }
@@ -151,9 +155,9 @@ int* Swap(int* massiv, int m, int mm)
 	{
 		mov eax, a
 		mov ebx, b
-		mov ecx, eax
+		mov ecx, ebx
 		mov ebx, eax
-		mov ebx, ecx
+		mov eax, ecx
 		mov a, eax
 		mov b, ebx
 	}
